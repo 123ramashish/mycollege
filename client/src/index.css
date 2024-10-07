@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.loginpage{
+  background-image: url(https://c1.wallpaperflare.com/preview/1/1010/561/table-work-computer-study-reading.jpg);
+  background-size: cover;
+  background-position: center;
+}
