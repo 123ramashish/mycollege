@@ -3,10 +3,9 @@ import passwordHash from "password-hash";
 import jwt from "jsonwebtoken";
 export default class UserController{
     static login = async (req,res)=>{
-        const {systemid,password,usertype} = req.body;
+        const {systemid,usertype,password} = req.body;
         try {  
             const user = await User.findOne({systemid});
-            console.log("user",user);
             if(!user){
                 return res.status(404).json({message:"User not found/Register First"});
             }
@@ -18,7 +17,7 @@ export default class UserController{
                 return res.status(401).json({message:"Invalid user type"});
             }
             const token = jwt.sign({systemid,usertype},process.env.JWT_SECRET);
-            const { password, ...userData } = user;
+            const userData ={ id:user._id,name:user.name,systemid:user.systemid,usertype:user.usertype}
 
             return res.status(200).json({message:"Login Successfully",token,userData});
         } catch (error) {

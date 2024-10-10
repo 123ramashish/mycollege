@@ -30,7 +30,7 @@ export default function Login() {
     
       if(res.ok){
       const data = await res.json();
-      dispatch(loginSuccess(data));
+      dispatch(loginSuccess(data.userData));
       navigate(`/${formData.usertype}`);
       }else{
         const errorData = await res.json();

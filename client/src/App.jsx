@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
 import Login from './pages/Login'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 import Header from './components/Header'
 import Signup from './pages/Signup'
 import Student from './pages/Student'
@@ -20,7 +20,7 @@ function App() {
       <Route path='/faculty' element={<Faculty/>}/>
       <Route path='/admin' element={<Admin/>}/>
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
     </BrowserRouter>
 
  
