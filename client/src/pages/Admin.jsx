@@ -10,11 +10,10 @@ import {
   HiPencil,
 } from "react-icons/hi";
 import Dashboard from "../components/adminDashboard/Dashboard";
-import Courses from "../components/classroom/Courses";
-import Slots from "../components/classroom/Slots";
-import CourseAllotment from "../components/classroom/CourseAllotment";
-import ClassRoom from "../components/classroom/ClassRoom";
 import StudentsTable from "../components/studentDashboard/StudentsTable";
+import CourseTable from "../components/courses/CourseTable";
+import TimeTable from "../components/classroom/TimeTable";
+import FacultyTable from "../components/facultyDashboard/FacultyTable";
 
 export default function Admin() {
   const [tab,setTab]=useState('dashboard')
@@ -44,15 +43,13 @@ export default function Admin() {
                     <Sidebar.Item  icon={HiUsers} onClick={()=>setTab('courses')} className="text-black font-semibold">
                      Courses
                     </Sidebar.Item>
-                    <Sidebar.Item icon={HiLogin} onClick={()=>setTab('slots')} className="text-black font-semibold" >
-                      Slots
+                    <Sidebar.Item icon={HiLogin} onClick={()=>setTab('timetable')} className="text-black font-semibold" >
+                      Time Table
                     </Sidebar.Item>
-                    <Sidebar.Item icon={HiPencil} onClick={()=>setTab('classrooms')}  className="text-black font-semibold">
-                     Classrooms
+                    <Sidebar.Item icon={HiPencil} onClick={()=>setTab('faculty')}  className="text-black font-semibold">
+                    Faculty
                     </Sidebar.Item>
-                    <Sidebar.Item  icon={HiPencil} onClick={()=>setTab('courseallotment')} className="text-black font-semibold" >
-                     Course Allotment
-                    </Sidebar.Item>
+                    
                   </Sidebar.ItemGroup>
                   <Sidebar.ItemGroup>
                     <Sidebar.Item href="/signout" icon={HiClipboard} className="text-black font-semibold">
@@ -69,10 +66,9 @@ export default function Admin() {
     <div className='mt-8 scroll-y-auto'>
   {tab === 'dashboard' && <Dashboard />}
 {tab === 'students' && <StudentsTable />}
-{tab === 'courses' && <Courses />}
-{tab === 'slots' && <Slots />}
-{tab === 'classrooms' && <ClassRoom />}
-{tab === 'courseallotment' && <CourseAllotment />}
+{tab === 'courses' && <CourseTable />}
+{tab === 'timetable' && <TimeTable />}
+{tab === 'faculty' && <FacultyTable />}
 
 
     </div>
