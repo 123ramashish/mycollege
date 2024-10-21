@@ -1,6 +1,8 @@
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import AddFaculty from "./AddFaculty"; // Assuming this is the component to add faculty
+import { MdOutlineDeleteOutline } from "react-icons/md";
+import { TfiWrite } from "react-icons/tfi";
 
 export default function FacultyTable() {
   return (
@@ -14,7 +16,6 @@ export default function FacultyTable() {
             <option value="email">Email</option>
             <option value="department">Department</option>
             <option value="designation">Designation</option>
-            <option value="course">Course</option>
             <option value="joiningDate">Joining Date</option>
             <option value="status">Status</option>
             <MdOutlineArrowDropDown />
@@ -41,7 +42,6 @@ export default function FacultyTable() {
                 <th className="p-2 border-r-2 border-gray-800">Email</th>
                 <th className="p-2 border-r-2 border-gray-800">Department</th>
                 <th className="p-2 border-r-2 border-gray-800">Designation</th>
-                <th className="p-2 border-r-2 border-gray-800">Course</th>
                 <th className="p-2 border-r-2 border-gray-800">Joining Date</th>
                 <th className="p-2 border-r-2 border-gray-800">Leave Date</th>
                 <th className="p-2 border-r-2 border-gray-800">Status</th>
@@ -57,11 +57,10 @@ export default function FacultyTable() {
                 <td className="p-2 border-r border-gray-800">john.smith@example.com</td>
                 <td className="p-2 border-r border-gray-800">Computer Science</td>
                 <td className="p-2 border-r border-gray-800">Professor</td>
-                <td className="p-2 border-r border-gray-800">CS101</td>
                 <td className="p-2 border-r border-gray-800">2022-01-10</td>
                 <td className="p-2 border-r border-gray-800">N/A</td>
                 <td className="p-2 border-r border-gray-800">Active</td>
-                <td className="p-2 border-r border-gray-800">Edit</td>
+                <td className="p-2 border-r border-gray-800"><span className="cursor-pointer flex items-center gap-2 text-3xl"><TfiWrite className="text-blue-500"/><MdOutlineDeleteOutline className="text-red-500"  /></span></td>
               </tr>
               <tr className="p-2">
                 <td className="p-2 border-x border-gray-800">2</td>
@@ -70,11 +69,10 @@ export default function FacultyTable() {
                 <td className="p-2 border-r border-gray-800">jane.doe@example.com</td>
                 <td className="p-2 border-r border-gray-800">Mathematics</td>
                 <td className="p-2 border-r border-gray-800">Associate Professor</td>
-                <td className="p-2 border-r border-gray-800">MAT101</td>
                 <td className="p-2 border-r border-gray-800">2021-09-15</td>
                 <td className="p-2 border-r border-gray-800">N/A</td>
                 <td className="p-2 border-r border-gray-800">Active</td>
-                <td className="p-2 border-r border-gray-800">Edit</td>
+                <td className="p-2 border-r border-gray-800"><span className="cursor-pointer flex items-center gap-2 text-3xl"><TfiWrite className="text-blue-500"/><MdOutlineDeleteOutline className="text-red-500"  /></span></td>
               </tr>
               {/* Add more rows as needed */}
             </tbody>

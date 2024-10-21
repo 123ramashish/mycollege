@@ -1,6 +1,8 @@
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import AddStudents from "./AddStudents";
+import { MdOutlineDeleteOutline } from "react-icons/md";
+import { TfiWrite } from "react-icons/tfi";
 
 export default function StudentsTable() {
   return (
@@ -63,7 +65,7 @@ export default function StudentsTable() {
       <td className="p-2 border-r border-gray-800 ">2020-01-01</td>
       <td className="p-2 border-r border-gray-800 ">Yes</td>
       <td className="p-2 border-r border-gray-800 ">Active</td>
-      <td className="p-2 border-r border-gray-800 ">Edit</td>
+      <td className="p-2 border-r border-gray-800 "> <span className="cursor-pointer flex items-center gap-2 text-3xl"><TfiWrite className="text-blue-500"/><MdOutlineDeleteOutline className="text-red-500"  /></span></td>
     </tr> 
     <tr className="p-2">
       <td className="p-2 border-x border-gray-800 ">1</td>
@@ -77,7 +79,7 @@ export default function StudentsTable() {
       <td className="p-2 border-r border-gray-800 ">2020-01-01</td>
       <td className="p-2 border-r border-gray-800 ">Yes</td>
       <td className="p-2 border-r border-gray-800 ">Active</td>
-      <td className="p-2 border-r border-gray-800 ">Edit</td>
+      <td className="p-2 border-r border-gray-800 "> <span className="cursor-pointer flex items-center gap-2 text-3xl"><TfiWrite className="text-blue-500"/><MdOutlineDeleteOutline className="text-red-500"  /></span></td>
     </tr> 
     <tr className="p-2">
       <td className="p-2 border-x border-gray-800 ">1</td>
@@ -91,7 +93,7 @@ export default function StudentsTable() {
       <td className="p-2 border-r border-gray-800 ">2020-01-01</td>
       <td className="p-2 border-r border-gray-800 ">Yes</td>
       <td className="p-2 border-r border-gray-800 ">Active</td>
-      <td className="p-2 border-r border-gray-800 ">Edit</td>
+      <td className="p-2 border-r border-gray-800 "> <span className="cursor-pointer flex items-center gap-2 text-3xl"><TfiWrite className="text-blue-500"/><MdOutlineDeleteOutline className="text-red-500"  /></span></td>
     </tr> 
     
   </tbody>

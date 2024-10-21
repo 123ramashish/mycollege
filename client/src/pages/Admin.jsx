@@ -12,8 +12,10 @@ import {
 import Dashboard from "../components/adminDashboard/Dashboard";
 import StudentsTable from "../components/studentDashboard/StudentsTable";
 import CourseTable from "../components/courses/CourseTable";
-import TimeTable from "../components/classroom/TimeTable";
 import FacultyTable from "../components/facultyDashboard/FacultyTable";
+import ClassRoomTable from "../components/classroom/ClassRoomTable";
+import SlotTable from "../components/slot/SlotTable";
+import CourseAllotmentTable from "../components/courseAllotment/CourseAllotmentTable";
 
 export default function Admin() {
   const [tab,setTab]=useState('dashboard')
@@ -34,25 +36,32 @@ export default function Admin() {
                 
                 <Sidebar.Items>
                   <Sidebar.ItemGroup >
-                    <Sidebar.Item  icon={HiChartPie} onClick={()=>setTab('dashboard')} className="text-black font-semibold">
+                    <Sidebar.Item  icon={HiChartPie} onClick={()=>setTab('dashboard')} className="text-black font-semibold cursor-pointer">
                       Dashboard
                     </Sidebar.Item>
-                    <Sidebar.Item  icon={HiUsers} onClick={()=>setTab('students')} className="text-black font-semibold" >
+                    <Sidebar.Item  icon={HiUsers} onClick={()=>setTab('students')} className="text-black font-semibold cursor-pointer" >
                       Students
                     </Sidebar.Item>
-                    <Sidebar.Item  icon={HiUsers} onClick={()=>setTab('courses')} className="text-black font-semibold">
+                    <Sidebar.Item icon={HiPencil} onClick={()=>setTab('faculty')}  className="text-black font-semibold cursor-pointer">
+                    Faculty
+                    </Sidebar.Item>
+                    <Sidebar.Item  icon={HiUsers} onClick={()=>setTab('courses')} className="text-black font-semibold cursor-pointer  ">
                      Courses
                     </Sidebar.Item>
-                    <Sidebar.Item icon={HiLogin} onClick={()=>setTab('timetable')} className="text-black font-semibold" >
-                      Time Table
+                   
+                    <Sidebar.Item icon={HiLogin} onClick={()=>setTab('classroom')} className="text-black font-semibold cursor-pointer" >
+                     Classroom
                     </Sidebar.Item>
-                    <Sidebar.Item icon={HiPencil} onClick={()=>setTab('faculty')}  className="text-black font-semibold">
-                    Faculty
+                    <Sidebar.Item icon={HiLogin} onClick={()=>setTab('courseallotment')} className="text-black font-semibold cursor-pointer" >
+                     Course Allotment
+                    </Sidebar.Item>
+                    <Sidebar.Item icon={HiLogin} onClick={()=>setTab('slot')} className="text-black font-semibold cursor-pointer" >
+                     slot
                     </Sidebar.Item>
                     
                   </Sidebar.ItemGroup>
                   <Sidebar.ItemGroup>
-                    <Sidebar.Item href="/signout" icon={HiClipboard} className="text-black font-semibold">
+                    <Sidebar.Item href="/signout" icon={HiClipboard} className="text-black font-semibold cursor-pointer">
                       Sign Out
                     </Sidebar.Item>
                     
@@ -67,7 +76,9 @@ export default function Admin() {
   {tab === 'dashboard' && <Dashboard />}
 {tab === 'students' && <StudentsTable />}
 {tab === 'courses' && <CourseTable />}
-{tab === 'timetable' && <TimeTable />}
+{tab === 'slot' && <SlotTable />}
+{tab === 'classroom' && <ClassRoomTable/>}
+{tab === 'courseallotment' && <CourseAllotmentTable />}
 {tab === 'faculty' && <FacultyTable />}
 
 

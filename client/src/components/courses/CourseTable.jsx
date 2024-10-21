@@ -1,6 +1,7 @@
 import { IoSearch } from "react-icons/io5";
-import { MdOutlineArrowDropDown } from "react-icons/md";
 import AddCourse from "./AddCourse";
+import { MdOutlineDeleteOutline } from "react-icons/md";
+import { TfiWrite } from "react-icons/tfi";
 
 export default function CourseTable() {
   return (
@@ -11,10 +12,8 @@ export default function CourseTable() {
             <option value="">Select Attribute</option>
             <option value="coursename">Course Name</option>
             <option value="coursecode">Course Code</option>
-            <option value="faculty">Faculty</option>
-            <option value="slot">Slot</option>
-            <option value="room">Room</option>
-            <MdOutlineArrowDropDown />
+            <option value="credit">Credit</option>
+            <option value="coursetype">Course Type</option>
           </select>
         </div>
         <div className="flex items-center gap-2 border-2 border-gray-500 rounded-md focus-within:border-blue-500">
@@ -36,9 +35,8 @@ export default function CourseTable() {
                 <th className="p-2 border-r-2 border-gray-800">Course Name</th>
                 <th className="p-2 border-r-2 border-gray-800">Course Code</th>
                 <th className="p-2 border-r-2 border-gray-800">Credit</th>
-                <th className="p-2 border-r-2 border-gray-800">Faculty</th>
-                <th className="p-2 border-r-2 border-gray-800">Slot</th>
-                <th className="p-2 border-r-2 border-gray-800">Room</th>
+                <th className="p-2 border-r-2 border-gray-800">Allocated Seats</th>
+                <th className="p-2 border-r-2 border-gray-800">Course Type</th>
                 <th className="p-2 border-r-2 border-gray-800">Actions</th>
               </tr>
             </thead>
@@ -48,30 +46,27 @@ export default function CourseTable() {
                 <td className="p-2 border-r border-gray-800">Mathematics</td>
                 <td className="p-2 border-r border-gray-800">MTH101</td>
                 <td className="p-2 border-r border-gray-800">3</td>
-                <td className="p-2 border-r border-gray-800">Dr. Smith</td>
-                <td className="p-2 border-r border-gray-800">Mon 9-11</td>
-                <td className="p-2 border-r border-gray-800">Room 101</td>
-                <td className="p-2 border-r border-gray-800">Edit</td>
-              </tr>
+                <td className="p-2 border-r border-gray-800">30</td>
+                <td className="p-2 border-r border-gray-800">Core</td>
+                <td className="p-2 border-r border-gray-800 "> <span className="cursor-pointer flex items-center gap-2 text-2xl"><TfiWrite className="text-blue-500"/><MdOutlineDeleteOutline className="text-red-500"  /></span></td>
+                </tr>
               <tr className="p-2">
                 <td className="p-2 border-x border-gray-800">2</td>
                 <td className="p-2 border-r border-gray-800">Physics</td>
                 <td className="p-2 border-r border-gray-800">PHY101</td>
                 <td className="p-2 border-r border-gray-800">4</td>
-                <td className="p-2 border-r border-gray-800">Dr. Johnson</td>
-                <td className="p-2 border-r border-gray-800">Tue 10-12</td>
-                <td className="p-2 border-r border-gray-800">Room 102</td>
-                <td className="p-2 border-r border-gray-800">Edit</td>
+                <td className="p-2 border-r border-gray-800">25</td>
+                <td className="p-2 border-r border-gray-800">Core</td>
+                <td className="p-2 border-r border-gray-800"> <span className="cursor-pointer flex items-center gap-2 text-2xl"><TfiWrite className="text-blue-500"/><MdOutlineDeleteOutline className="text-red-500"  /></span></td>
               </tr>
               <tr className="p-2">
                 <td className="p-2 border-x border-gray-800">3</td>
                 <td className="p-2 border-r border-gray-800">Chemistry</td>
                 <td className="p-2 border-r border-gray-800">CHE101</td>
                 <td className="p-2 border-r border-gray-800">4</td>
-                <td className="p-2 border-r border-gray-800">Dr. Brown</td>
-                <td className="p-2 border-r border-gray-800">Wed 1-3</td>
-                <td className="p-2 border-r border-gray-800">Room 103</td>
-                <td className="p-2 border-r border-gray-800">Edit</td>
+                <td className="p-2 border-r border-gray-800">30</td>
+                <td className="p-2 border-r border-gray-800">Core</td>
+                <td className="p-2 border-r border-gray-800"> <span className="cursor-pointer flex items-center gap-2 text-2xl"><TfiWrite className="text-blue-500"/><MdOutlineDeleteOutline className="text-red-500"  /></span></td>
               </tr>
             </tbody>
           </table>
